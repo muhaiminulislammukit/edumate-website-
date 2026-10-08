@@ -46,10 +46,6 @@ export default function Navbar({
     { id: 3, title: 'Quiz Evaluated', time: '3 hrs ago', text: 'You scored 94% in Higher Math Chapter Test! 🏆', read: true }
   ];
 
-  const adminUrl = import.meta.env.VITE_ADMIN_URL || (
-    import.meta.env.DEV ? 'http://localhost:5174/admin/' : '/admin/'
-  );
-
   // Public roles only; administration runs as a separate app.
   const roles = [
     { id: 'student', label: 'Student View', icon: GraduationCap, badge: 'Class 10 Science', color: '#4F46E5', portalPath: '/portal/student' },
@@ -117,9 +113,6 @@ export default function Navbar({
             <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981', display: 'inline-block' }}></span>
             Support Online (9 AM - 11 PM)
           </span>
-          <a href={adminUrl} style={{ color: '#FFFFFF', fontWeight: '700', textDecoration: 'underline' }}>
-            Admin Gateway
-          </a>
         </div>
       </div>
 
